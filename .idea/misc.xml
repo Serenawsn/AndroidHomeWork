@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_dialog.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_first.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_second.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/control/src/main/res/layout/activity_main.xml" value="0.23052536231884058" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21302083333333333" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/drawable/ic_launcher_background.xml" value="0.21302083333333333" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/layout/activity_address.xml" value="0.1234375" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/layout/activity_main.xml" value="0.1234375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
