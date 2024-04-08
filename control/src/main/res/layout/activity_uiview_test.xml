@@ -16,9 +16,11 @@
     <ImageView
         android:id="@+id/imageShow"
         android:layout_width="200dp"
+        android:layout_gravity="center"
         android:layout_height="150dp">
     </ImageView>
     <Button
+        android:id="@+id/deleteBut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="删除数据"
