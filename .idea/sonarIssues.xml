@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../GLAndroidStudioSDK/platforms/android-30/android.jar!/java/util/TimerTask.class">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <value>
             <set />
@@ -28,7 +33,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/control/src/main/java/com/example/control/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/control/src/main/java/com/example/control/UIViewTestActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/control/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/control/src/main/res/layout/activity_uiview_test.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/control/src/main/res/layout/simple_spinner_item.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/control/src/main/res/values/spinner_province.xml">
           <value>
             <set />
           </value>

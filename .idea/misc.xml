@@ -7,7 +7,9 @@
         <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_first.xml" value="0.25364583333333335" />
         <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
         <entry key="..\:/Android/GLAndroidStudio_Project/app/src/main/res/layout/activity_second.xml" value="0.25364583333333335" />
-        <entry key="..\:/Android/GLAndroidStudio_Project/control/src/main/res/layout/activity_main.xml" value="0.23052536231884058" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/control/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/control/src/main/res/layout/activity_uiview_test.xml" value="0.23802083333333332" />
+        <entry key="..\:/Android/GLAndroidStudio_Project/control/src/main/res/layout/simple_spinner_item.xml" value="0.1390625" />
         <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21302083333333333" />
         <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/drawable/ic_launcher_background.xml" value="0.21302083333333333" />
         <entry key="..\:/Android/GLAndroidStudio_Project/intent_turn_info/src/main/res/layout/activity_address.xml" value="0.1234375" />
