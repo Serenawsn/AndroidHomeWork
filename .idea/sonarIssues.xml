@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../GLAndroidStudioSDK/platforms/android-30/android.jar!/java/util/TimerTask.class">
           <value>
             <set />
@@ -103,7 +108,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/listview_test/build/intermediates/packaged_manifests/debug/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/control/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/listview_test/FriendIsnfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/listview_test/FriendsInfo.java">
           <value>
             <set />
           </value>
@@ -113,7 +138,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/listview_test/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/listview_test/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/res/layout/items_layout.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/res/values/array_message.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/res/values/strings.xml">
           <value>
             <set />
           </value>

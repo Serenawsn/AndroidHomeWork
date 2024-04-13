@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/image1"
-            android:scaleType="fitXY">
-        </ImageView>
+            android:scaleType="fitXY"
+            android:src="@drawable/image1"></ImageView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingHorizontal="10dp"
-            android:layout_weight="1">
+            android:paddingHorizontal="10dp">
+
             <TextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
@@ -27,8 +32,8 @@
                 android:layout_weight="1"
                 android:text="曾泽明"
                 android:textColor="@color/black"
-                android:textSize="18sp">
-            </TextView>
+                android:textSize="18sp"></TextView>
+
             <TextView
                 android:id="@+id/message"
                 android:layout_width="match_parent"
@@ -36,41 +41,42 @@
                 android:layout_weight="1"
                 android:text="下午有空吗？"
                 android:textColor="#686767"
-                android:textSize="18sp">
-            </TextView>
+                android:textSize="18sp"></TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="08:49"
                 android:gravity="center"
+                android:text="08:49"
                 android:textColor="#686767"
-                android:textSize="18sp">
-            </TextView>
+                android:textSize="18sp"></TextView>
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:cardBackgroundColor="#f00"
-                app:cardCornerRadius="10dp"
+                android:id="@+id/cardViewTest"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="bottom|center"
-                android:visibility="visible">
+                android:visibility="visible"
+                app:cardBackgroundColor="#f00"
+                app:cardCornerRadius="12dp">
+
                 <TextView
                     android:id="@+id/info"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
                     android:text="4"
                     android:textColor="@color/white"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:textSize="16sp">
-                </TextView>
+                    android:textSize="16sp"></TextView>
 
 
             </androidx.cardview.widget.CardView>

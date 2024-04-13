@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GLAndroidStudio_Project">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.listview_test.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
