@@ -93,6 +93,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/listview/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview/src/main/java/com/example/wsn/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/listview_test/FriendIsnfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/java/com/example/listview_test/ListViewAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/listview_test/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../HelloWorld/app/src/main/java/com/example/helloworld/MainActivity.java">
           <value>
             <set />

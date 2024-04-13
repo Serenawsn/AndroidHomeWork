@@ -10,3 +10,5 @@ rootProject.name = "GLAndroidStudio_Project"
 include ':app'
 include ':intent_turn_info'
 include ':control'
+include ':listview'
+include ':listview_test'

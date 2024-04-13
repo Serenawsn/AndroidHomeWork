@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="name">
+        <item>张三</item>
+        <item>李四</item>
+        <item>王五</item>
+        <item>赵六</item>
+        <item>曾泽明</item>
+        <item>邓瑞桃</item>
+        <item>末广桥</item>
+        <item>橙红</item>
+        <item>林琳</item>
+        <item>赵丽颖</item>
+        <item>宋慧乔</item>
+        <item>李知恩</item>
+        <item>林允儿</item>
+    </string-array>
+</resources>

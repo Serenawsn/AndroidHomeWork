@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="name">
+        <item>张三</item>
+        <item>李四</item>
+        <item>王五</item>
+        <item>赵六</item>
+        <item>曾泽明</item>
+        <item>邓瑞桃</item>
+        <item>末广桥</item>
+        <item>橙红</item>
+        <item>林琳</item>
+        <item>赵丽颖</item>
+        <item>宋慧乔</item>
+        <item>李知恩</item>
+        <item>林允儿</item>
+    </string-array>
+    <string-array name="message">
+        <item>吃饭了吗</item>
+        <item>中午吃什么</item>
+        <item>要去哪玩</item>
+        <item>什么时候出发</item>
+        <item>在吗？</item>
+        <item>一起学习</item>
+        <item>晚上一起吃饭不</item>
+        <item>一起学Android</item>
+        <item>有没有吃早餐</item>
+        <item>到哪啦</item>
+        <item>哈哈哈哈</item>
+        <item>我到了</item>
+        <item>有事微信联系</item>
+    </string-array>
+    <string-array name="time">
+        <item>09:21</item>
+        <item>03:13</item>
+        <item>10:25</item>
+        <item>08:10</item>
+        <item>09:50</item>
+        <item>00:51</item>
+        <item>15:30</item>
+        <item>19:12</item>
+        <item>21:04</item>
+        <item>13:20</item>
+        <item>17:30</item>
+        <item>12:12</item>
+        <item>22:08</item>
+    </string-array>
+    <string-array name="info">
+        <item>4</item>
+        <item>10</item>
+        <item>1</item>
+        <item>3</item>
+        <item>18</item>
+        <item>12</item>
+        <item>5</item>
+        <item>2</item>
+        <item>7</item>
+        <item>9</item>
+        <item>6</item>
+        <item>30</item>
+        <item>16</item>
+        <item>11</item>
+        <item>15</item>
+        <item>13</item>
+    </string-array>
+</resources>

@@ -47,11 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     int id;
     String radioData;
-    String hobbyData="";
+    String hobbyData = "";
     String province;
     int srcImageId;     //本地图片id
-    Uri uri=Uri.parse("");//从相册中选中后返回的一个URI
-
+    Uri uri = Uri.parse("");//从相册中选中后返回的一个URI
 
 
     @Override
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         srcImageId = R.drawable.p2;
-        autoImageBut=findViewById(R.id.autoImageBut);
+        autoImageBut = findViewById(R.id.autoImageBut);
         //自选头像
 
         autoImageBut.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 selectPic();
             }
         });
-
 
 
         /**
@@ -104,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         /**
          * spinner
          */
@@ -134,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         /**
@@ -177,20 +173,20 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void run() {
                                         progress++;
-                                        if(progress==100){
+                                        if (progress == 100) {
                                             //关闭进度条
                                             progressBar.setVisibility(View.GONE);
                                             //关闭定时器
                                             timer.cancel();
                                             //跳转活动-传值
-                                            Intent intent = new Intent(MainActivity.this,UIViewTestActivity.class);
-                                            intent.putExtra("userName",editName);
-                                            intent.putExtra("userPwd",editPassword);
-                                            intent.putExtra("sex",radioData);
-                                            intent.putExtra("hobby",hobbyData);
-                                            intent.putExtra("address",province);
-                                            intent.putExtra("uri",uri.toString());
-                                            intent.putExtra("image",String.valueOf(srcImageId));
+                                            Intent intent = new Intent(MainActivity.this, UIViewTestActivity.class);
+                                            intent.putExtra("userName", editName);
+                                            intent.putExtra("userPwd", editPassword);
+                                            intent.putExtra("sex", radioData);
+                                            intent.putExtra("hobby", hobbyData);
+                                            intent.putExtra("address", province);
+                                            intent.putExtra("uri", uri.toString());
+                                            intent.putExtra("image", String.valueOf(srcImageId));
                                             startActivity(intent);
                                             Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_LONG).show();
                                         } else {
@@ -199,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 });
                             }
-                        },0,50);
+                        }, 0, 50);
                     }
                 }
             }
@@ -211,17 +207,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        progress=0;
+        progress = 0;
     }
-
-
 
 
     /* 打开本地相册选择图片
      */
-    private void selectPic(){
+    private void selectPic() {
         //intent可以应用于广播和发起意图，其中属性有：ComponentName,action,data等
-        Intent intent=new Intent();
+        Intent intent = new Intent();
         intent.setType("image/*");
         //action表示intent的类型，可以是查看、删除、发布或其他情况；我们选择ACTION_GET_CONTENT，系统可以根据Type类型来调用系统程序选择Type
         //类型的内容给你选择
@@ -232,12 +226,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *把用户选择的图片显示在imageview中
+     * 把用户选择的图片显示在imageview中
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //用户操作完成，结果码返回是-1，即RESULT_OK
-        if(resultCode==RESULT_OK){
+        if (resultCode == RESULT_OK) {
             //获取选中文件的定位符
             uri = data.getData();
             Log.e("uri", uri.toString());
@@ -248,9 +242,9 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
                 imageView.setImageBitmap(bitmap);
             } catch (FileNotFoundException e) {
-                Log.e("Exception", e.getMessage(),e);
+                Log.e("Exception", e.getMessage(), e);
             }
-        }else{
+        } else {
             //操作错误或没有选择图片
             Log.i("MainActivtiy", "operation error");
         }
