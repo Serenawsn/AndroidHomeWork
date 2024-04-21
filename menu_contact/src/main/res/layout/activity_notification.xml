@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <ListView
-        android:id="@+id/listView"
+    tools:context=".NotificationActivity">
+    <TextView
+        android:id="@+id/receive_Text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"></TextView>
+
 </LinearLayout>

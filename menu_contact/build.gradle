@@ -7,8 +7,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.menucontact"
-        minSdk 21
-        targetSdk 34
+        minSdk 16
+        targetSdk 20
         versionCode 1
         versionName "1.0"
 
@@ -25,6 +25,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
 }
 
 dependencies {
