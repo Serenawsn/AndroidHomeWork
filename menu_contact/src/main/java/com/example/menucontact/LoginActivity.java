@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -93,5 +94,30 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        //登录功能
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = editTextName.getText().toString();    //获取用户名
+                String userPwd = editTextPwd.getText().toString();      //获取密码
+                String inputCode = editTextCode.getText().toString();   //获取验证码
+                if (username.equals("")|userPwd.equals("")){
+                    Toast.makeText(LoginActivity.this,"用户名或密码不能为空",Toast.LENGTH_LONG).show();
+                } else if (inputCode.equals("")){
+                    Toast.makeText(LoginActivity.this,"验证码不能为空",Toast.LENGTH_LONG).show();
+                } else if (!username.equals("wengshuoning")){
+                    Toast.makeText(LoginActivity.this,"用户名错误",Toast.LENGTH_LONG).show();
+                } else if (!userPwd.equals("123456")){
+                    Toast.makeText(LoginActivity.this,"密码错误",Toast.LENGTH_LONG).show();
+                } else if (!inputCode.equals(String.valueOf(code))){
+                    Toast.makeText(LoginActivity.this,"验证码错误",Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
+
 }
