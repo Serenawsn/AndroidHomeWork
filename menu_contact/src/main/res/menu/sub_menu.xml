@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/color"
+        android:title="变颜色">
+        <menu>
+            <!--  checkableBehavior的可选值由三个：single设置为单选，all为多选，none为普通选项  -->
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/blue"
+                    android:title="蓝色" />
+                <item
+                    android:id="@+id/green"
+                    android:title="绿色" />
+                <item
+                    android:id="@+id/red"
+                    android:title="红色" />
+                <item
+                    android:id="@+id/yellow"
+                    android:title="黄色" />
+                <item
+                    android:id="@+id/purple"
+                    android:title="紫色" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/frontSize"
+        android:title="变字体大小">
+        <menu>
+            <!--  checkableBehavior的可选值由三个：single设置为单选，all为多选，none为普通选项  -->
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/frontSize_10sp"
+                    android:title="10sp" />
+                <item
+                    android:id="@+id/frontSize_20sp"
+                    android:title="20sp" />
+                <item
+                    android:id="@+id/frontSize_30sp"
+                    android:title="30sp" />
+                <item
+                    android:id="@+id/frontSize_40sp"
+                    android:title="40sp" />
+                <item
+                    android:id="@+id/frontSize_50sp"
+                    android:title="50sp" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
