@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView1"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/image1"
@@ -57,6 +57,7 @@
                 app:cardBackgroundColor="#f00"
                 app:cardCornerRadius="20dp"
                 android:layout_gravity="center"
+                android:visibility="invisible"
                 android:layout_weight="1">
                 <TextView
                     android:id="@+id/info"
