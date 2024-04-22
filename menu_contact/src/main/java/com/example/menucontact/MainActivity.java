@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -42,9 +45,59 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.wechat_menu, menu);
+        return true;
+    }
 
-
-
+    //在选项菜单打开以后会调用这个方法，设置menu图标显示（icon）
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        if (menu != null) {
+            if (menu.getClass().getSimpleName().equalsIgnoreCase("MenuBuilder")) {
+                try {
+                    Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                    method.setAccessible(true);
+                    method.invoke(menu, true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return super.onMenuOpened(featureId, menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.createChat:
+                Toast.makeText(MainActivity.this,"创建群聊",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.addFriends:
+                Toast.makeText(MainActivity.this,"添加好友",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.matchChat:
+                Toast.makeText(MainActivity.this,"匹配聊天",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.togetherParty:
+                Toast.makeText(MainActivity.this,"一起派对",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.scan:
+                Toast.makeText(MainActivity.this,"扫一扫",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.faceToFace:
+                Toast.makeText(MainActivity.this,"面对面快传",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.payMoney:
+                Toast.makeText(MainActivity.this,"收付款",Toast.LENGTH_LONG).show();
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 
     private void initData() {
@@ -74,7 +127,5 @@ public class MainActivity extends AppCompatActivity {
                 friendsInfoList.add(friendsInfo);
             }
         }
-
-
     }
 }

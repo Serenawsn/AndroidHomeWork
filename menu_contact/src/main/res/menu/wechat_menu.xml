@@ -8,7 +8,7 @@
         <item android:id="@+id/togetherParty" android:orderInCategory="100" android:title="一起派对"/>
         <item android:id="@+id/faceToFace" android:orderInCategory="100" android:title="面对面快传"/>
         <item android:id="@+id/payMoney" android:orderInCategory="100" android:title="收付款"/>
-        <item android:id="@+id/scan" android:orderInCategory="100" android:title="扫一扫"/>
+        <item android:id="@+id/scan" android:orderInCategory="100" android:icon="@drawable/scan" android:title="扫一扫"/>
 
 
     </group>

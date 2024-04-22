@@ -18,9 +18,6 @@
                 <item
                     android:id="@+id/yellow"
                     android:title="黄色" />
-                <item
-                    android:id="@+id/purple"
-                    android:title="紫色" />
             </group>
         </menu>
     </item>
