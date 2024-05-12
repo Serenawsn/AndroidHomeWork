@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".OrderBroadcastActivity">
     <Button
-        android:id="@+id/returnBtn"
+        android:id="@+id/sendBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转到有序广播"
+        android:text="发送广播"
         android:textSize="20sp">
+
     </Button>
+
 </LinearLayout>
