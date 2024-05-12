@@ -16,8 +16,8 @@ public class MyService extends Service {
 
     @Override
     public void onCreate() {
-        Log.v("MyService", "服务创建成功onCreate()");
         super.onCreate();
+        Log.v("MyService", "服务创建成功onCreate()");
         new Thread() {
             @Override
             public void run() {
@@ -45,13 +45,14 @@ public class MyService extends Service {
     @Override
     public boolean onUnbind(Intent intent) {
         Log.v("MyService", "服务解除绑定onUnbind()");
-        return super.onUnbind(intent);
+        return true;
     }
 
     @Override
     public void onDestroy() {
-        Log.v("MyService", "服务解除onDestroy()");
         super.onDestroy();
+        this.stop=true;
+        Log.v("MyService", "服务解除onDestroy()");
     }
 
 

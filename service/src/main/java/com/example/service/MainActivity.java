@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         bindBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (myConn==null){
-//                    myConn=new MyConn();
-//                }
+                if (myConn == null) {
+                    myConn = new MyConn();
+                }
                 Intent intent = new Intent(MainActivity.this, MyService.class);
-                bindService(intent, serviceConnection, BIND_AUTO_CREATE);
+                bindService(intent, myConn, BIND_AUTO_CREATE);
             }
         });
         getServiceBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,36 +48,39 @@ public class MainActivity extends AppCompatActivity {
         unbindBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (myConn!=null){
-                unbindService(serviceConnection);
-//                    myConn=null;
-//                }
+                if (myConn != null) {
+                    unbindService(myConn);
+                    myConn = null;
+                }
             }
         });
     }
 
-    private ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            Log.v("MainActivity", "服务连接成功");
-            myBinder = (MyService.MyBinder) iBinder;
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName componentName) {
-            Log.v("MainActivity", "服务断开连接");
-        }
-    };
+//    private ServiceConnection serviceConnection = new ServiceConnection() {
+//        @Override
+//        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+//            Log.v("MainActivity", "服务连接成功");
+//            myBinder = (MyService.MyBinder) iBinder;
+//        }
+//
+//        @Override
+//        public void onServiceDisconnected(ComponentName componentName) {
+//            Log.v("MainActivity", "服务断开连接");
+//        }
+//    };
 
 
     private class MyConn implements ServiceConnection {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             Log.v("MainActivity", "服务绑定成功");
+            myBinder = (MyService.MyBinder) iBinder;
+
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
+            Log.v("MainActivity", "服务断开连接");
 
         }
     }
