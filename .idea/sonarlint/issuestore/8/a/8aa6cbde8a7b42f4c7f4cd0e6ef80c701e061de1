@@ -1,0 +1,26 @@
+
+E
+java:S1121¢".Extract the assignment out of this expression.(ø×ï¦
+J
+java:S1121£".Extract the assignment out of this expression.(åĞÜùÿÿÿÿ
+C
+java:S1604?"(Make this anonymous inner class a lambda(»·¢ıÿÿÿÿ
+C
+java:S1604N"(Make this anonymous inner class a lambda(áİ—Ûÿÿÿÿÿ
+D
+java:S1604«"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604"(Make this anonymous inner class a lambda(û®Àâüÿÿÿÿ
+ƒ
+java:S4165£"gRemove this useless assignment; "hobbyData" already holds the assigned value along all execution paths.(åĞÜùÿÿÿÿ
+~
+java:S4165¢"gRemove this useless assignment; "hobbyData" already holds the assigned value along all execution paths.(ø×ï¦
+m
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¨Œşÿÿÿÿ
+Q	java:S125S"<This block of commented-out lines of code should be removed.(ÜÖÇ
+V	java:S125W"<This block of commented-out lines of code should be removed.(ÍÙ…ıÿÿÿÿ
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ¢®Êøÿÿÿÿ
+V	java:S125{"<This block of commented-out lines of code should be removed.(ÂáÔ¸øÿÿÿÿ
+‚
+java:S2178•"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(Ì«÷îÿÿÿÿÿ

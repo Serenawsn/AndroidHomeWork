@@ -26,25 +26,23 @@ public class MainActivity extends AppCompatActivity {
         TextView message = findViewById(R.id.message);
         EditText bookName = findViewById(R.id.bookName);
         EditText bookAuthor = findViewById(R.id.bookAuthor);
-        EditText bookPage = findViewById(R.id.bookPage);
-        EditText bookPiece = findViewById(R.id.bookPiece);
+        EditText bookPages = findViewById(R.id.bookPage);
+        EditText bookPrice = findViewById(R.id.bookPrice);
         Button createBtn = findViewById(R.id.createBtn);
         Button addBtn = findViewById(R.id.addBtn);
         Button updateBtn = findViewById(R.id.updateBtn);
         Button deleteBtn = findViewById(R.id.deleteBtn);
         Button selectBtn = findViewById(R.id.selectBtn);
 
-        //获取输入框的数据
-        String name = bookName.getText().toString();
-        String author = bookAuthor.getText().toString();
-        String page = bookPage.getText().toString();
-        String piece = bookPiece.getText().toString();
+        MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+
+
         //创建数据库
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建MyDatabaseHelper对象
-                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+                //创建一个MyDatabaseHelper对象，它是数据库的帮助类，用于打开和创建数据库。这里尝试打开或创建一个名为"BookStore.db"的数据库，版本号为4。
+//                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
                 SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getReadableDatabase();
                 Toast.makeText(MainActivity.this,"数据库已新建！",Toast.LENGTH_LONG).show();
             }
@@ -53,16 +51,20 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+                //获取输入框的数据
+                String name = bookName.getText().toString();
+                String author = bookAuthor.getText().toString();
+                String pages = bookPages.getText().toString();
+                String price = bookPrice.getText().toString();
                 SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put("name", name);
                 values.put("author", author);
-                values.put("page", page);
-                values.put("piece", piece);
+                values.put("pages", pages);
+                values.put("price", price);
                 //插入数据
                 sqLiteDatabase.insert("Book", null, values);      //表名、列、值
-                Toast.makeText(MainActivity.this,"数据已添加！",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"数据已添加！"+values,Toast.LENGTH_LONG).show();
 
 
             }
@@ -71,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+//                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
                 SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 //以键值对的形式插入
-                values.put("piece", "49.9");
+                values.put("price", "49.9");
                 sqLiteDatabase.update("Book", values, "author=?", new String[]{"翁烁柠"});
                 Toast.makeText(MainActivity.this,"数据已更新！",Toast.LENGTH_LONG).show();
 
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+//                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
                 SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
                 sqLiteDatabase.delete("Book","author=?",new String[]{"翁烁柠"});
                 Toast.makeText(MainActivity.this,"数据已删除！",Toast.LENGTH_LONG).show();
@@ -96,21 +98,30 @@ public class MainActivity extends AppCompatActivity {
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+//                MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(MainActivity.this, "BookStore.db", null, 4);
+                //调用myDatabaseHelper的getWritableDatabase(),来获取一个可写的SQLiteDatabase对象。这个对象允许我们执行数据库操作。
                 SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
-                Cursor cursor = sqLiteDatabase.query("Book",null,null,null,null,null,"id ASC");
+                //使用SQLiteDatabase的query方法来查询名为"Book"的表。
+                Cursor cursor = sqLiteDatabase.query("Book",null,null,null,null,null,null);
+                //用于构建最终的文本内容。StringBuilder在拼接大量字符串时比直接使用+操作符更高效。
                 StringBuilder content = new StringBuilder();
-                content.append("id"+"\t\t\t"+"BookName"+"\t\t\t"+"Author"+"\t\t\t"+"Pages"+"\t\t\t"+"Piece"+"\n");
-                while (cursor.moveToNext()){
-                    int id = cursor.getInt(cursor.getColumnIndex("id"));
-                    String name = cursor.getString(1);
-                    String author = cursor.getString(2);
-                    String page = cursor.getString(3);
-                    String piece = cursor.getString(4);
-                    content.append(id+"\t\t\t"+name+"\t\t\t"+author+"\t\t"+page+"\t\t"+piece+"\n");
-                    cursor.close();
-                    message.setText(content.toString());
+                //向content中添加表头信息
+                content.append("id"+"\t\t\t"+"BookName"+"\t\t\t"+"Author"+"\t\t\t"+"Pages"+"\t\t\t"+"Price"+"\n");
+                if (cursor.moveToFirst()){
+//                    检查cursor是否有数据。如果有,moveToFirst方法将cursor移动到结果集的第一行。
+                    do {
+                        int id = cursor.getInt(cursor.getColumnIndex("id"));
+                        String name = cursor.getString(cursor.getColumnIndex("name"));
+                        String author = cursor.getString(cursor.getColumnIndex("author"));
+                        int pages = cursor.getInt(cursor.getColumnIndex("pages"));
+                        String price = cursor.getString(cursor.getColumnIndex("price"));
+                        content.append(id+"\t\t\t"+name+"\t\t\t"+author+"\t\t\t"+pages+"\t\t\t"+price+"\n");
+                    } while (cursor.moveToNext());  //将cursor移动到下一行。如果cursor还有下一行，循环将继续。
                 }
+                cursor.close();
+//                sqLiteDatabase.close();
+                message.setText(content.toString());
+//
             }
         });
 
