@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 cursor.close();
 //                sqLiteDatabase.close();
-                message.setText(content.toString());
+
+                message.setText("查询数据显示如下：\n"+content.toString());
 //
             }
         });
